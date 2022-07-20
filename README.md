@@ -10,7 +10,7 @@ Libs used:
 
 # Usage
 ## Screenshot
-![Server and Client](/blob/all.png)
+![Server and Client](/blob/usage.png)
 
 ## How to run
 ###	Running server:
