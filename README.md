@@ -32,15 +32,21 @@ Client username can be passed as command line argument, for ex. :
 ## Restrictions
  - Max username length is set to 16
  - Max message length is set to 256
- - Max packet size is username + message + len bytes + magic start/end byets = 16 + 256 + 2 + 6 = 280
+ - Max packet size is username + message + len bytes + magic open/close byets = 16 + 256 + 2 + 6 = 280
 
 ## Packet format
 
 ```
-    0                  3             4                u         u+1           t                  t+3
-    +------------------+-------------+------ /// -----+----------+---- /// ---+-------------------+
-    | Magic bytes open | Usename len | Username value | Text len | Text value | Magic bytes close |
-    +------------------+-------------+------ /// -----+----------+---- /// ---+-------------------+
+  0                  3             4                u         u+1           t                  t+3
+  +------------------+-------------+------ /// -----+----------+---- /// ---+-------------------+
+  | Magic bytes open | Usename len | Username value | Text len | Text value | Magic bytes close |
+  +------------------+-------------+------ /// -----+----------+---- /// ---+-------------------+
 ```
 
- - Magic bytes open - "$%_", end - _%$
+Fields description:
+ - Magic bytes open - 3 bytes - '$%\_' used to validate message start 
+ - Username len - one byte that equals to length of Username value field length
+ - Username value - field, that contains username
+ - Text len - one byte that equals to length of Text value field length
+ - Text value - field, that contains message
+ - Magic bytes close - 3 bytes '\_%$' used to validate message end
