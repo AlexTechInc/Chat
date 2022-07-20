@@ -10,7 +10,7 @@ Libs used:
 
 # Usage
 ## Screenshot
-![Server and Client](https://raw.githubusercontent.com/AlexTechInc/Chat/main/blob/all.png)
+![Server and Client](/blob/all.png)
 
 ## How to run
 ###	Running server:
@@ -25,5 +25,6 @@ If window creation for server is no needed, command line argument ```--no--windo
 
 Client default username is always set to 'client'
 
-Client username can be passed as command line argument, for ex. ```python client.py AlexTechInc```
+Client username can be passed as command line argument, for ex. :
+```python client.py AlexTechInc```
 
