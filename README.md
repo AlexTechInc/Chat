@@ -29,12 +29,12 @@ Client username can be passed as command line argument, for ex. :
 ```python client.py AlexTechInc```
 
 # Transfer details
-## Restrictions
+### Restrictions
  - Max username length is set to 16
  - Max message length is set to 256
  - Max packet size is username + message + len bytes + magic open/close byets = 16 + 256 + 2 + 6 = 280
 
-## Packet format
+### Packet format
 
 ```
     0                  3             4                u         u+1           t                  t+3
