@@ -37,10 +37,10 @@ Client username can be passed as command line argument, for ex. :
 ## Packet format
 
 ```
-  0                  3             4                u         u+1           t                  t+3
-  +------------------+-------------+------ /// -----+----------+---- /// ---+-------------------+
-  | Magic bytes open | Usename len | Username value | Text len | Text value | Magic bytes close |
-  +------------------+-------------+------ /// -----+----------+---- /// ---+-------------------+
+   0                  3             4                u         u+1           t                  t+3
+   +------------------+-------------+------ /// -----+----------+---- /// ---+-------------------+
+   | Magic bytes open | Usename len | Username value | Text len | Text value | Magic bytes close |
+   +------------------+-------------+------ /// -----+----------+---- /// ---+-------------------+
 ```
 
 Fields description:
